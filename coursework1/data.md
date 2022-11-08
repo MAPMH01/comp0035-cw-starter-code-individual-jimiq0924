@@ -30,22 +30,22 @@ ori_sheet1_data = pd.read_excel(filepath,sheet_name = 'County0010')
 print(ori_sheet1_data.value_counts('A100008_00'))
 ```
 
-# Taking this code as an example, in this section we perform null checks on the four columns of data that need to be used.
-# The logic for determining whether a column has a null value is: if any row of a column is empty, it returns true; If false is returned, no row is empty。
+Taking this code as an example, in this section we perform null checks on the four columns of data that need to be used.
+The logic for determining whether a column has a null value is: if any row of a column is empty, it returns true; If false is returned, no row is empty。
 
 ```
 print(pd.isna(ori_data['County0010']['A100008_00']))
 ```
-# Using this line of code as an example, if the data has null values, run this line to show where values are null and where are not
+Using this line of code as an example, if the data has null values, run this line to show where values are null and where are not
 
 ```
 print(type(ori_data['County0010']['A100008_00'][0]))
 ```
-# Using this line of code as an example，suppose we know that a row is not a null value, then look at its data type
+Using this line of code as an example，suppose we know that a row is not a null value, then look at its data type
 
 
 # 3.Calculate the statistical characteristics of the data
-# In this section, we analyze the statistical characteristics of the urban population in 2000 and 2010, and calculate the sum, mean, and variance of the two sets of data. Taking the urban population in 2000 as an example, the code to implement the calculation is as follows:
+In this section, we analyze the statistical characteristics of the urban population in 2000 and 2010, and calculate the sum, mean, and variance of the two sets of data. Taking the urban population in 2000 as an example, the code to implement the calculation is as follows:
 
 ```
 ##Analyze column'A100008_00'
